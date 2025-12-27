@@ -127,6 +127,60 @@ html, body {
     gap: 60px;
     width: 85%;
 }
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /* السماح بالتمرير */
+    html, body {
+        overflow: auto;
+    }
+
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation a {
+        padding-left: 15px;
+        font-size: 1em;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 80px 20px;
+    }
+
+    /* MAIN CONTENT */
+    .main > div {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .main h2 {
+        font-size: 1.2em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+
+    /* IMAGE */
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons a {
+        font-size: 20px;
+        margin: 8px;
+    }
+}
+
 
 
 
