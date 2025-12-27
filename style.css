@@ -3,11 +3,13 @@ header{
 background-color:#f0f0f0;
 width:100%;
 position: fixed;
+top:0;
+left:0;
 z-index: 999;
 display: flex;
 justify-content: space-between;
 align-items: center;
-
+padding:15px 70px;
 }
 .logo{
 text-decoration: none;
@@ -39,14 +41,11 @@ section{
     padding:100px 70px;
 }
 .main{
-    width: 100%;
+    
     min-height:100vh;
     display: flex;
     align-items: center;
-   
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    justify-content:center;
 }
 .main h2{
     color: black;
@@ -61,13 +60,7 @@ letter-spacing: 1px;
 margin-top: 10px;
 margin-bottom: 30px;
 }
-.my-work a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #0077ff;
-    font-weight: bold;
 
-}
 .social-icons a {
     font-size: 25px;
     margin: 10px;
@@ -103,10 +96,7 @@ margin-bottom: 30px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-
-    position: absolute;
-    top: 120px;
-    right: 12px;          /* أقصى اليمين */
+    
 }
 
 
@@ -130,6 +120,14 @@ html, body {
     height: 100%;
     overflow: hidden;   /* يمنع أي حركة */
 }
+.main > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 85%;
+}
+
 
 
 
