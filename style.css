@@ -263,12 +263,7 @@ html, body {
     }
 }
 
-@media (max-width: 768px) {
-    .main > div {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+
 
 
 
