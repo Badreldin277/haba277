@@ -239,6 +239,30 @@ html, body {
         font-size: 1.5em;
     }
 }
+@media (max-width: 768px) {
+
+    /* نجعل المحتوى عمودي */
+    .main > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* نضع الصورة في الأعلى */
+    .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
 
 
 
