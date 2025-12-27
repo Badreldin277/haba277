@@ -1,77 +1,56 @@
-
-header{
-background-color:#f0f0f0;
-width:100%;
-position: fixed;
-top:0;
-left:0;
-z-index: 999;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding:15px 70px;
-}
-.logo{
-text-decoration: none;
-color:black;
-font-weight: 700;
-font-size: 1.8em;
-}
-.navigation a{
-color:blue;
-text-decoration: none;
-font: size 1.1em;
-font-weight: 500;
-padding-left: 100px;
-}
-.navigation a:hover{
-    color: #601;
-    ;
-    display: inline-block;
-    margin: 0 10px;
-    text-decoration: none;
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding-top: 80px; /* مساحة للهيدر */
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
 header {
-    overflow: visible;
-}
-
-
-section{
-    padding:100px 70px;
-}
-.main{
-    
-    min-height:100vh;
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content:center;
+    padding: 15px 70px;
 }
-.main h2{
+
+.logo {
+    text-decoration: none;
     color: black;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-.main h3{
-color: black;
-    font-size: 2em;
     font-weight: 700;
-letter-spacing: 1px;
-margin-top: 10px;
-margin-bottom: 30px;
+    font-size: 1.8em;
 }
 
-.social-icons a {
-    font-size: 25px;
-    margin: 10px;
-    color:wheat;
-    transition: 0.3s;
+.navigation a {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
 }
 
-.social-icons a:hover {
-    color: black;
+.navigation a:hover {
+    color: #0077ff;
 }
 
+/* ===== SECTIONS ===== */
+section {
+    padding: 100px 70px;
+}
+
+/* ===== MAIN ===== */
 .main {
     min-height: 100vh;
     display: flex;
@@ -83,11 +62,20 @@ margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
     width: 80%;
 }
 
-.text {
-    max-width: 50%;
+.text h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.text h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .image img {
@@ -96,119 +84,34 @@ margin-bottom: 30px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    
 }
 
-
-/* أيقونات السوشال */
+/* ===== SOCIAL ICONS ===== */
 .social-icons a {
     font-size: 22px;
-    margin: 10px;
-    color:black;
+    margin: 5px;
+    color: black;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
     color: #0077ff;
 }
-body {
-    margin: 0;
-    padding: 0;
-}
-html, body {
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;   /* يمنع أي حركة */
-}
-.main > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    width: 85%;
-}
+
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-    /* السماح بالتمرير */
-    html, body {
-        overflow: auto;
-    }
-
     /* HEADER */
     header {
+        flex-direction: column;
         padding: 15px 20px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navigation a {
-        padding-left: 15px;
-        font-size: 1em;
-    }
-
-    /* SECTIONS */
-    section {
-        padding: 80px 20px;
-    }
-
-    /* MAIN CONTENT */
-    .main > div {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        width: 100%;
-    }
-
-    .main h2 {
-        font-size: 1.2em;
-    }
-
-    .main h3 {
-        font-size: 1.6em;
-    }
-    @media (max-width: 768px) {
-
-    .main > div {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* نجعل الصورة فوق النص */
-    .image {
-        order: -1;
-        margin-bottom: 20px;
-    }
-
-    .image img {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-
-    /* IMAGE */
-    .image img {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* SOCIAL ICONS */
-    .social-icons a {
-        font-size: 20px;
-        margin: 8px;
-    }
-}
-@media (max-width: 768px) {
-
-    header {
-        padding: 10px 15px;
-        flex-direction: column;
     }
 
     .navigation {
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .navigation a {
@@ -216,42 +119,22 @@ html, body {
         font-size: 1em;
     }
 
+    /* SECTIONS */
     section {
-        padding: 70px 20px;
+        padding: 60px 15px;
     }
 
-    .main > div {
+    /* MAIN CONTENT */
+    .content {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
-    }
-
-    .image img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .main h2 {
-        font-size: 1.2em;
-    }
-
-    .main h3 {
-        font-size: 1.5em;
-    }
-}
-@media (max-width: 768px) {
-
-    /* نجعل المحتوى عمودي */
-    .main > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* نضع الصورة في الأعلى */
-    .image {
+        gap: 20px;
         width: 100%;
+    }
+
+    /* IMAGE ABOVE TEXT */
+    .image {
+        order: -1;
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
@@ -261,15 +144,17 @@ html, body {
         width: 180px;
         height: 180px;
     }
+
+    .text h2 {
+        font-size: 1.3em;
+    }
+
+    .text h3 {
+        font-size: 1.5em;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 5px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
