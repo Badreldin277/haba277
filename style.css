@@ -1,132 +1,62 @@
-
-header{
-background-color:#f0f0f0;
-width:100%;
-position: fixed;
-z-index: 999;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-}
-.logo{
-text-decoration: none;
-color:black;
-font-weight: 700;
-font-size: 1.8em;
-}
-.navigation a{
-color:blue;
-text-decoration: none;
-font: size 1.1em;
-font-weight: 500;
-padding-left: 100px;
-}
-.navigation a:hover{
-    color: #601;
-    ;
-    display: inline-block;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-header {
-    overflow: visible;
-}
-
-
-section{
-    padding:100px 70px;
-}
-.main{
-    width: 100%;
-    min-height:100vh;
-    display: flex;
-    align-items: center;
-    background:url(background.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.main h2{
-    color: #fff;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-.main h3{
-color: #fff;
-    font-size: 2em;
-    font-weight: 700;
-letter-spacing: 1px;
-margin-top: 10px;
-margin-bottom: 30px;
-}
-.my-work a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #0077ff;
-    font-weight: bold;
-
-}
-.social-icons a {
-    font-size: 25px;
-    margin: 10px;
-    color:wheat;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: black;
-}
-
-.main {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-}
-
-.text {
-    max-width: 50%;
-}
-
-.image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-
-    position: absolute;
-    top: 120px;
-    right: 12px;          /* أقصى اليمين */
-}
-
-
-/* أيقونات السوشال */
-.social-icons a {
-    font-size: 22px;
-    margin: 10px;
-    color:white;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #0077ff;
-}
-body {
+/* General reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html, body {
+
+/* Main section layout */
+.main {
     width: 100%;
-    height: 100%;
-    overflow: hidden;   /* يمنع أي حركة */
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Container inside main */
+.main > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+/* Text content */
+.main h2,
+.main h3,
+.social-icons,
+.my-work,
+audio {
+    max-width: 500px;
+}
+
+/* Image container */
+.image {
+    flex-shrink: 0; /* prevents image from being affected by text */
+}
+
+/* Image responsiveness */
+.image img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .main > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image img {
+        width: 220px;
+    }
+}
+
