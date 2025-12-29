@@ -193,8 +193,50 @@ header {
     transform: translateY(-12px);
     box-shadow: 0 15px 40px rgba(96,165,250,0.25);
 }
+/* ===== STYLES FOR HEADINGS ===== */
+
+/* تحسين النص */
+.skills h2, .projects h2, .contact h2 {
+    font-family: 'Poppins', sans-serif; /* اختيار خط جميل */
+    font-size: 2em;
+    font-weight: 700;
+    background: linear-gradient(45deg, #0077ff, #00bcd4); /* تدرج لوني */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skills h2:hover, .projects h2:hover, .contact h2:hover {
+    transform: scale(1.1); /* تكبير النص عند المرور عليه */
+}
+
+/* إضافة تأثير الظل للنص */
+.skills h2::after, .projects h2::after, .contact h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* ===== تلوين النص بشكل جديد عند المرور عليه ===== */
+.skills h2:hover, .projects h2:hover, .contact h2:hover {
+    color: #ff7f00; /* تغيير اللون عند المرور بالفأرة */
+    text-shadow: 0 4px 6px rgba(0,0,0,0.2); /* تأثير الظل */
+}
+
 
 .project h3 {
     margin-bottom: 10px;
     color: #93c5fd;
 }
+
