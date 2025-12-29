@@ -280,6 +280,30 @@ header {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+/* ===== TEXT PARAGRAPH STYLING ===== */
+.text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333; /* لون النص */
+    text-align: center; /* توسيط النص */
+    margin-top: 20px;
+    max-width: 800px; /* تحديد عرض النص */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px; /* إضافة حواف للنص */
+    background: #f4f7fa; /* خلفية فاتحة */
+    border-radius: 10px; /* حواف دائرية */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    transition: all 0.3s ease; /* تأثير عند المرور */
+}
+
+/* ===== ADD HOVER EFFECT ===== */
+.text p:hover {
+    transform: translateY(-5px); /* تحريك النص قليلاً عند المرور */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* زيادة الظل */
+    background: #e8f2f9; /* تغيير الخلفية عند المرور */
+}
+
 
 /* تغيير اللون عند المرور بالفأرة */
 .skills h2:hover, .projects h2:hover, .contact h2:hover {
@@ -295,3 +319,4 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
