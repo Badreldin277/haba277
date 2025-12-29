@@ -180,7 +180,7 @@ header {
   display: flex;
    flex-wrap:wrap;
     gap: 25px;
-    overflow-x:auto;
+    
 }
 
 .project {
@@ -190,9 +190,9 @@ header {
     transition: 0.4s;
     animation: fadeScale 1s ease;
     color: white; /* إضافة هذه الخاصية */
-    flex:0 0 260px;
+    flex:1 1 260px;
     min-whidt:260px;
-    box-sizing:border-box;
+    
 }
 
 .project:hover {
@@ -248,6 +248,7 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
 
 
 
