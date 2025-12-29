@@ -154,8 +154,8 @@ header {
 
 /* ===== SKILLS ===== */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+   flex-wrap:wrap;
     gap: 20px;
 }
 
@@ -166,6 +166,8 @@ header {
     text-align: center;
     transition: 0.3s;
     color: white; /* إضافة هذه الخاصية */
+    flex:1 1 200px;
+    min-width:200px
 }
 
 .skill:hover {
@@ -175,8 +177,8 @@ header {
 
 /* ===== PROJECTS ===== */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+   flex-wrap:wrap;
     gap: 25px;
 }
 
@@ -187,6 +189,8 @@ header {
     transition: 0.4s;
     animation: fadeScale 1s ease;
     color: white; /* إضافة هذه الخاصية */
+    flex:1 1 260px;
+    min-whidt:260px
 }
 
 .project:hover {
@@ -242,6 +246,7 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
 
 
 
