@@ -326,6 +326,37 @@ header {
 html {
     scroll-behavior: smooth;
 }
+.form-container {
+    width: 100%;
+    max-width: 380px;   /* ← تحكم في حجم الفورم */
+    margin: 0 auto;     /* توسيط */
+}
+.form-container input,
+.form-container textarea {
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+.form-container textarea {
+    min-height: 90px; /* تقليل ارتفاع مربع الرسالة */
+}
+
+.form-container button {
+    padding: 8px;
+    font-size: 0.9em;
+}
+.form-container form {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 320px;
+    }
+}
+
 
 
 
