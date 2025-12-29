@@ -55,7 +55,7 @@ header {
 
 .content {
     display: flex;
-    flex-direction: column; /* كل العناصر تحت بعضها */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
     align-items: center;
     width: 100%;
     max-width: 500px;
@@ -134,11 +134,14 @@ header {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+    /* تحسين صورة المستخدم على الجوال */
     .image img {
         width: 180px;
         height: 180px;
     }
 
+    /* تحسين النصوص */
     .text h2 {
         font-size: 1.3em;
     }
@@ -150,14 +153,57 @@ header {
     .social-icons a {
         font-size: 20px;
     }
+
+    /* المهارات والمشاريع: تغيير من صف أفقي إلى عمودي */
+    .skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .skill {
+        min-width: 90%;    /* تعديل العرض ليأخذ 90% من العرض */
+        flex: 1 1 80%;     /* تعديل لتوسيع العنصر */
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .project {
+        min-width: 90%;    /* تعديل العرض ليأخذ 90% من العرض */
+        flex: 1 1 80%;     /* تعديل لتوسيع العنصر */
+    }
+
+    /* تعديل الهيدر */
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    /* تغيير المسافات داخل الفورم */
+    .form-container input,
+    .form-container textarea,
+    .form-container button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* تحسين الهوامش بين الأجزاء */
+    .content {
+        gap: 15px;
+    }
 }
 
 /* ===== SKILLS ===== */
 .skills {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 20px;
-    justify-content:center;
+    justify-content: center;
 }
 
 .skill {
@@ -166,9 +212,9 @@ header {
     border-radius: 12px;
     text-align: center;
     transition: 0.3s;
-    color: white; /* إضافة هذه الخاصية */
-    flex:1 1 200px;
-    min-width:200px
+    color: white;
+    flex: 1 1 200px;
+    min-width: 200px;
 }
 
 .skill:hover {
@@ -178,10 +224,10 @@ header {
 
 /* ===== PROJECTS ===== */
 .projects {
-  display: flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
-    justify-content:center;
+    justify-content: center;
 }
 
 .project {
@@ -190,24 +236,24 @@ header {
     border-radius: 16px;
     transition: 0.4s;
     animation: fadeScale 1s ease;
-    color: white; /* إضافة هذه الخاصية */
-    flex:1 1 260px;
-    min-whidt:260px;
-    
+    color: white;
+    flex: 1 1 260px;
+    min-width: 260px;
 }
 
 .project:hover {
     transform: translateY(-12px);
     box-shadow: 0 15px 40px rgba(96,165,250,0.25);
 }
+
 /* ===== STYLES FOR HEADINGS ===== */
 
 /* تحسين النص */
 .skills h2, .projects h2, .contact h2 {
-    font-family: 'Poppins', sans-serif; /* اختيار خط جميل */
+    font-family: 'Poppins', sans-serif;
     font-size: 2em;
     font-weight: 700;
-    background: linear-gradient(45deg, #0077ff, #00bcd4); /* تدرج لوني */
+    background: linear-gradient(45deg, #0077ff, #00bcd4);
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
@@ -219,7 +265,7 @@ header {
 }
 
 .skills h2:hover, .projects h2:hover, .contact h2:hover {
-    transform: scale(1.1); /* تكبير النص عند المرور عليه */
+    transform: scale(1.1);
 }
 
 /* إضافة تأثير الظل للنص */
@@ -235,26 +281,17 @@ header {
     border-radius: 5px;
 }
 
-/* ===== تلوين النص بشكل جديد عند المرور عليه ===== */
+/* تغيير اللون عند المرور بالفأرة */
 .skills h2:hover, .projects h2:hover, .contact h2:hover {
-    color: #ff7f00; /* تغيير اللون عند المرور بالفأرة */
-    text-shadow: 0 4px 6px rgba(0,0,0,0.2); /* تأثير الظل */
+    color: #ff7f00;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
-
 
 .project h3 {
     margin-bottom: 10px;
     color: #93c5fd;
 }
+
 html {
     scroll-behavior: smooth;
 }
-
-
-
-
-
-
-
-
-
