@@ -155,8 +155,9 @@ header {
 /* ===== SKILLS ===== */
 .skills {
     display: flex;
-  
+    flex-wrap:wrap;
     gap: 20px;
+    justify-content:center;
 }
 
 .skill {
@@ -178,9 +179,9 @@ header {
 /* ===== PROJECTS ===== */
 .projects {
   display: flex;
-
+    flex-wrap:wrap;
     gap: 25px;
-    
+    justify-content:center;
 }
 
 .project {
@@ -248,6 +249,7 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
 
 
 
